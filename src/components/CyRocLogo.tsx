@@ -13,7 +13,7 @@ const CyRocLogo: React.FC<CyRocLogoProps> = ({ className = "" }) => {
     >
       {/* Eagle logo from public/ (use url-safe filename) */}
       <img
-        src="/final-logo.png"
+        src={`${import.meta.env.BASE_URL}final-logo.png`}
         alt="CyRoc Eagle Logo"
         className="h-12 w-12 object-contain"
       />
