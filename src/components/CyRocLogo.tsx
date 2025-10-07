@@ -6,29 +6,29 @@ interface CyRocLogoProps {
 
 const CyRocLogo: React.FC<CyRocLogoProps> = ({ className = "" }) => {
   return (
-    <a 
+    <a
       href="/"
-      className={`flex items-center space-x-3.5 group transition-all duration-300 hover:scale-105 ${className}`}
+      className={`flex items-center group transition-all duration-300 hover:scale-105 ${className}`}
       aria-label="CyRoc Cybersecurity - Home"
+      style={{ alignItems: 'center' }}
     >
-      {/* PNG Logo */}
-      <div className="relative">
-        <img 
-          src="/LOGO.png" 
-          alt="CyRoc Logo"
-          className="h-8 w-8 object-contain group-hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.6)] transition-all duration-300"
+      {/* Eagle logo from public/ */}
+      <div className="flex items-center justify-center" style={{ width: 56, height: 56 }}>
+        <img
+          src="/Final Logo.png"
+          alt="CyRoc Eagle Logo"
+          className="h-14 w-14 object-contain"
+          style={{ display: 'block' }}
         />
-        
-        {/* Animated Pulse Effect */}
-        <div className="absolute inset-0 animate-pulse opacity-30 group-hover:opacity-50 transition-opacity duration-300">
-          <div className="h-8 w-8 border border-tactical-yellow/50 rounded-sm"></div>
-        </div>
       </div>
-      
-      {/* Company Name */}
+
+      {/* Spacing roughly the width of the beak */}
+      <div style={{ width: 28 }} />
+
+      {/* Company Name - white, uppercase, generous spacing */}
       <div className="text-left">
-        <span className="font-space-grotesk font-bold text-3xl leading-none text-soft-white group-hover:text-tactical-yellow transition-colors duration-300" style={{ letterSpacing: '-0.8px' }}>
-          CyRoc
+        <span className="font-space-grotesk font-bold text-3xl leading-none text-white tracking-wider" style={{ letterSpacing: '2px' }}>
+          CYROC
         </span>
       </div>
     </a>
