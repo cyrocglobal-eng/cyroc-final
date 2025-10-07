@@ -399,6 +399,41 @@
   .timeline-content {
     @apply text-center transition-all duration-500;
   }
+
+  /* Site navbar glassmorphism styles */
+  nav.site-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    pointer-events: auto;
+  }
+
+  nav.site-navbar > .nav-inner {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-20 rounded-xl;
+    background-color: rgba(10, 10, 10, 0.55);
+    border: 1px solid rgba(255, 215, 0, 0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 220ms ease, box-shadow 220ms ease, transform 160ms ease;
+  }
+
+  nav.site-navbar > .nav-inner .nav-right {
+    @apply flex items-center gap-4;
+  }
+
+  nav.site-navbar > .nav-inner:hover {
+    background-color: rgba(10, 10, 10, 0.7);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  }
+
+  /* Reduce visual noise on very small screens */
+  @media (max-width: 640px) {
+    nav.site-navbar > .nav-inner {
+      @apply px-3 h-16 rounded-lg;
+    }
+  }
   
   .timeline-content.active {
     @apply transform scale-105;
