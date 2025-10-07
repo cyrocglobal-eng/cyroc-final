@@ -8,22 +8,15 @@ const CyRocLogo: React.FC<CyRocLogoProps> = ({ className = "" }) => {
   return (
     <a
       href="/"
-      className={`flex items-center group transition-all duration-300 hover:scale-105 ${className}`}
+      className={`flex items-center space-x-7 group transition-all duration-300 hover:scale-105 ${className}`}
       aria-label="CyRoc Cybersecurity - Home"
-      style={{ alignItems: 'center' }}
     >
-      {/* Eagle logo from public/ */}
-      <div className="flex items-center justify-center" style={{ width: 56, height: 56 }}>
-        <img
-          src="/Final Logo.png"
-          alt="CyRoc Eagle Logo"
-          className="h-14 w-14 object-contain"
-          style={{ display: 'block' }}
-        />
-      </div>
-
-      {/* Spacing roughly the width of the beak */}
-      <div style={{ width: 28 }} />
+      {/* Eagle logo from public/ (use url-safe filename) */}
+      <img
+        src="/final-logo.png"
+        alt="CyRoc Eagle Logo"
+        className="h-12 w-12 object-contain"
+      />
 
       {/* Company Name - white, uppercase, generous spacing */}
       <div className="text-left">
