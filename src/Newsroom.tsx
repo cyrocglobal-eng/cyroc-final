@@ -211,8 +211,15 @@ function Newsroom() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-jet-black via-jet-black to-tactical-yellow/15"></div>
+        {/* Hero background (image from public/) with gradient overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `linear-gradient(to bottom right, rgba(12,12,12,0.85), rgba(26,26,26,0.5), rgba(255,215,0,0.08)), url(${import.meta.env.BASE_URL}home-hero.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        ></div>
         
         {/* Circuit Pattern Overlay */}
         <div className="absolute inset-0 opacity-10">
