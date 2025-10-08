@@ -13,7 +13,7 @@ const CyRocLogo: React.FC<CyRocLogoProps> = ({ className = "" }) => {
     >
       {/* Eagle logo from public/ (use url-safe filename) */}
       <img
-        src={`${import.meta.env.BASE_URL}final-no-bg-clean-2.png`}
+        src={`${import.meta.env.BASE_URL}Final.png`}
         alt="CyRoc Eagle Logo"
         className="h-16 w-16 object-contain transition-shadow duration-300 ease-out transform-gpu group-hover:drop-shadow-[0_0_18px_rgba(255,215,0,0.65)] group-hover:scale-105 active:scale-95"
       />
