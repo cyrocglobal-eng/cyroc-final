@@ -89,9 +89,9 @@ function AIPlatform() {
   return (
     <div className="min-h-screen bg-jet-black text-soft-white">
       {/* Navigation */}
-      <nav className="site-navbar">
-        <div className="nav-inner">
-          <div className="flex justify-between items-center w-full">
+      <nav className="fixed top-0 w-full z-50 bg-jet-black/90 backdrop-blur-md border-b border-tactical-yellow/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
             <CyRocLogo />
             
             <div className="hidden lg:flex items-center space-x-8">
@@ -115,9 +115,9 @@ function AIPlatform() {
       </nav>
 
       {/* Hero Section */}
-        <nav className="site-navbar">
-          <div className="nav-inner">
-            <div className="flex justify-between items-center w-full">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-jet-black via-jet-black to-tactical-yellow/15"></div>
         
         {/* AI Circuit Pattern Overlay */}
         <div className="absolute inset-0 opacity-10">
