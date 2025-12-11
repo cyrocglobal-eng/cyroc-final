@@ -11,9 +11,9 @@ const CyRocLogo: React.FC<CyRocLogoProps> = ({ className = "" }) => {
       className={`flex items-center space-x-5 group transition-all duration-300 hover:scale-105 ${className}`}
       aria-label="CyRoc Cybersecurity - Home"
     >
-      {/* Use the transparent logo file already in public/ to force a fresh asset name (cache-bust) */}
+      {/* Transparent logo from public/ */}
       <img
-        src={`${import.meta.env.BASE_URL}cyroc-hawk-logo-v2.png`}
+        src={`${import.meta.env.BASE_URL}final-no-bg-clean-2.png`}
         alt="Cyroc Hawk Logo"
         className="h-16 w-16 object-contain transition-shadow duration-300 ease-out transform-gpu group-hover:drop-shadow-[0_0_18px_rgba(255,215,0,0.65)] group-hover:scale-105 active:scale-95"
       />
