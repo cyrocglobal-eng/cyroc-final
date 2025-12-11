@@ -661,3 +661,53 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #FFD700;
 }
+
+/* Navbar: rounded container look without changing HTML structure
+   - Applies a smooth border-radius (12-18px range) to the fixed navbar
+   - Keeps existing background, border, and backdrop-blur intact
+   - Uses responsive radius: 12px small, 16px default, 18px large
+*/
+/* Navbar: create a centered, rounded background without changing HTML
+   - Keep layout and spacing unchanged by transferring visual styles
+     from the full-width `nav` to its centered inner container.
+   - This preserves Tailwind backgrounds, borders and backdrop blur
+     while making the visible background rounded and centered.
+*/
+nav.fixed.top-0.w-full.z-50 {
+  /* keep nav layout and stacking but defer visuals to inner container */
+  background-color: transparent !important;
+  border-bottom: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding-top: 0; /* let inner container control visual padding */
+}
+
+/* Target the centered inner wrapper produced by Tailwind (`max-w-7xl mx-auto ...`) */
+nav.fixed.top-0.w-full.z-50 > .max-w-7xl {
+  /* Explicitly apply the original nav visuals to the centered wrapper */
+  background-color: rgba(12,12,12,0.9); /* matches bg-jet-black/90 */
+  border: 1px solid rgba(255,215,0,0.08); /* subtle tactical-yellow border */
+  border-bottom-width: 1px;
+  backdrop-filter: blur(8px); /* approximate backdrop-blur-md */
+  -webkit-backdrop-filter: blur(8px);
+  /* Rounded container appearance */
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  overflow: visible;
+  /* Ensure the band doesn't change layout; allow inner flex to control height */
+  display: block;
+}
+
+@media (max-width: 640px) {
+  nav.fixed.top-0.w-full.z-50 > .max-w-7xl {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav.fixed.top-0.w-full.z-50 > .max-w-7xl {
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+  }
+}
